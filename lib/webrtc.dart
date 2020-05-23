@@ -1,4 +1,5 @@
 export 'get_user_media.dart' if (dart.library.js) 'web/get_user_media.dart';
+export 'callkit_audio_session.dart';
 export 'media_stream_track.dart'
     if (dart.library.js) 'web/media_stream_track.dart';
 export 'media_stream.dart' if (dart.library.js) 'web/media_stream.dart';
