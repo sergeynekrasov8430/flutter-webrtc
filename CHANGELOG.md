@@ -1,6 +1,10 @@
 ## Changelog
 
 --------------------------------------------
+[0.2.9] - 2020.05.23
+
+* [iOS] Added special API for the CallKit audioSession setup.
+
 [0.2.8] - 2020.04.22
 
 * [macOS/iOS] Fix typo in render size change check condition.
