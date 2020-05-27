@@ -1,6 +1,10 @@
 ## Changelog
 
 --------------------------------------------
+[0.2.10] - 2020.05.27
+
+* Web and macOS folders rmv
+
 [0.2.9] - 2020.05.23
 
 * [iOS] Added special API for the CallKit audioSession setup.
