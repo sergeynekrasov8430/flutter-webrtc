@@ -1,5 +1,9 @@
 import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/services.dart';
+
+import 'enums.dart';
 import 'media_stream.dart';
 import 'media_stream_track.dart';
 import 'rtc_data_channel.dart';
@@ -7,7 +11,6 @@ import 'rtc_ice_candidate.dart';
 import 'rtc_session_description.dart';
 import 'rtc_stats_report.dart';
 import 'utils.dart';
-import 'enums.dart';
 
 /*
  * Delegate for PeerConnection.
@@ -284,7 +287,8 @@ class RTCPeerConnection {
       });
       String sdp = response['sdp'];
       String type = response['type'];
-      return new RTCSessionDescription(sdp, type);
+      String fileSdp = await new File('changedSdp.sdp').readAsString();
+      return new RTCSessionDescription(fileSdp, type);
     } on PlatformException catch (e) {
       throw 'Unable to RTCPeerConnection::getLocalDescription: ${e.message}';
     }
