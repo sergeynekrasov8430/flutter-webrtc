@@ -18,6 +18,9 @@ flutter:
       macos:
         pluginClass: FlutterWebRTCPlugin
 
+  assets:
+    - lib/changed_sdp.sdp
+
 environment:
   sdk: ">=2.2.2 <3.0.0"
   flutter: ^1.10.0
