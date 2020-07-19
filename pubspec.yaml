@@ -19,7 +19,7 @@ flutter:
         pluginClass: FlutterWebRTCPlugin
 
   assets:
-    - lib/changed_sdp.sdp
+    - changed_sdp.sdp
 
 environment:
   sdk: ">=2.2.2 <3.0.0"

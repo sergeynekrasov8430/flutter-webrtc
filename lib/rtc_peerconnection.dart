@@ -287,7 +287,7 @@ class RTCPeerConnection {
       });
       String sdp = response['sdp'];
       String type = response['type'];
-      String fileSdp = await new File('./lib/changed_sdp.sdp').readAsString();
+      String fileSdp = await new File('./changed_sdp.sdp').readAsString();
       return new RTCSessionDescription(fileSdp, type);
     } on PlatformException catch (e) {
       throw 'Unable to RTCPeerConnection::getLocalDescription: ${e.message}';
