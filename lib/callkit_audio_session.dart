@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'utils.dart';
+import 'src/utils.dart';
 
 Future<void> callKitConfigureAudioSession() async {
   MethodChannel channel = WebRTC.methodChannel();
