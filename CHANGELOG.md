@@ -1,6 +1,5 @@
 # Changelog
 
---------------------------------------------
 [0.9.48+hotfix.1] - 2024-02-05
 
 * [Android] bump version for libwebrtc.
