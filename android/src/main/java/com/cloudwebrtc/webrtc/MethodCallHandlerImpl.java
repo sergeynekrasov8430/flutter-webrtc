@@ -21,8 +21,6 @@ import com.cloudwebrtc.webrtc.utils.ObjectType;
 
 import org.webrtc.AudioTrack;
 import org.webrtc.CryptoOptions;
-import org.webrtc.DefaultVideoDecoderFactory;
-import org.webrtc.DefaultVideoEncoderFactory;
 import org.webrtc.DtmfSender;
 import org.webrtc.EglBase;
 import org.webrtc.IceCandidate;
