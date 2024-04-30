@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:js_interop';
-import 'dart:js_util' if (dart.library.html) 'dart:js_util' as jsutil;
+import 'dart:js_util' if (dart.library.js) 'dart:js_util' as jsutil;
 import 'dart:ui_web' as web_ui;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/foundation.dart';
