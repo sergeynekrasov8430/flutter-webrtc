@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:js_interop';
-import 'dart:js_util' if (dart.library.js) 'dart:js_util' as jsutil;
+import 'dart:js_util' as jsutil;
 import 'dart:ui_web' as web_ui;
-import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:dart_webrtc/dart_webrtc.dart';
 import 'package:web/web.dart' as web;
 
@@ -239,20 +239,17 @@ class RTCVideoRenderer extends ValueNotifier<RTCVideoValue>
 
   @override
   Future<bool> audioOutput(String deviceId) async {
-    if (kIsWeb) {
-      try {
-        final element = _audioElement;
-        if (null != element && jsutil.hasProperty(element, 'setSinkId')) {
-          await jsutil.promiseToFuture<void>(
-              jsutil.callMethod(element, 'setSinkId', [deviceId]));
+    try {
+      final element = _audioElement;
+      if (null != element && jsutil.hasProperty(element, 'setSinkId')) {
+        await jsutil.promiseToFuture<void>(
+            jsutil.callMethod(element, 'setSinkId', [deviceId]));
 
-          return true;
-        }
-      } catch (e) {
-        print('Unable to setSinkId: ${e.toString()}');
+        return true;
       }
+    } catch (e) {
+      print('Unable to setSinkId: ${e.toString()}');
     }
-
     return false;
   }
 
