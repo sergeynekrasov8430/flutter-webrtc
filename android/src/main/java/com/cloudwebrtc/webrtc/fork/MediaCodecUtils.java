@@ -90,18 +90,6 @@ public class MediaCodecUtils {
     return false;
   }
 
-  public static Map<String, String> getCodecProperties(VideoCodecMimeType type, boolean highProfile) {
-    switch (type) {
-      case VP8:
-      case VP9:
-        return new HashMap<String, String>();
-      case H264:
-        return H264Utils.getDefaultH264Params(highProfile);
-      default:
-        throw new IllegalArgumentException("Unsupported codec: " + type);
-    }
-  }
-
   static boolean isHardwareAccelerated(MediaCodecInfo info) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
       return isHardwareAcceleratedQOrHigher(info);
